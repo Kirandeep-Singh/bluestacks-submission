@@ -1,0 +1,5 @@
+user_admin=admin
+pass_admin=Kiran@123
+roles_admin=all
+resources=create_vm,delete_vm,read_vm,update_vm,create_jobs,update_jobs,delete_jobs,read_jobs
+role_all=all
