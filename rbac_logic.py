@@ -21,12 +21,17 @@ class CredMain:
                 return True
 
     def _setvals(self):
-        self.roles = self._propobj.getprop("roles_" + self._username).split(",")
         self.resources = set()
-        for role in self.roles:
-            role_resources = self._propobj.getprop("role_" + role).split(",")
+        self.roles = self._propobj.getprop("roles_" + self._username).split(",")
+        if "super" in self.roles:
+            role_resources = self._propobj.getprop("resources").split(",")
             for rsrc in role_resources:
                 self.resources.add(rsrc)
+        else:
+            for role in self.roles:
+                role_resources = self._propobj.getprop("role_" + role).split(",")
+                for rsrc in role_resources:
+                    self.resources.add(rsrc)
     
     def _setmenu(self):
         if self._username == "admin":
@@ -222,7 +227,6 @@ class AdminTasks(CredMain):
         return True
 
 
-
 class NormalUserTasks(CredMain):
     def __init__(self, username, password, propobj, task) -> None:
         self.__task = task
@@ -238,4 +242,10 @@ class NormalUserTasks(CredMain):
         print ("Your User {} has below permissions.\nRole ==> {}\nResources ==> {}\n".format(self._username, ", ".join(self.roles), ", ".join(self.resources)))
 
     def __access(self):
-        pass
+        print ("You have requested to access a resource.\nBelow Resources can be accessed from your user.\nChoose the one you want to access.\n")
+        x = 1
+        for rsrc in self.resources:
+            print ("{}).\t {}.".format(x, rsrc))
+            x+=1
+        print ("Voila!!! This is end of this Code.")
+        print ("A User can access only the resources available in his role.\nadmin Can't run these tasks. We must create a non admin user with role super assigned.")

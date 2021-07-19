@@ -1,0 +1,10 @@
+users=kiran,admin
+pass_admin=Kiran@123
+roles_admin=super
+role_read=read_vm,read_jobs
+role_write=create_vm,read_vm,create_jobs,read_jobs
+role_super=all
+allroles=super,read,write
+resources=create_vm,delete_vm,read_vm,update_vm,create_jobs,update_jobs,delete_jobs,read_jobs
+pass_kiran=abc12345
+roles_kiran=super
