@@ -13,12 +13,13 @@ Details of files are below:
 4. **rbac_logic.py** contains the backend code and classes which are excuted upon selecting an action from main.py
 
 ## Execution
-   a. Clone the Repository.
-   b. run main.py, login as admin/Kiran@123
-   c. Following Menu Appears:
-   d. When user selects the number, appropriate tasks will be executed.
-   e. Following example shows execution of task6
-   Wecome to admin Tasks.
+1. Clone the Repository.
+2. run main.py, login as admin/Kiran@123
+3. Following Menu Appears:
+4. When user selects the number, appropriate tasks will be executed.
+5. Following example shows execution of task6
+'''
+Wecome to admin Tasks.
 1). Create New User.
 2). Create New Role.
 3). Edit a User.
@@ -35,5 +36,4 @@ write           createvm,readvm,createjobs,readjobs
 super           all
 read            readvm,readjobs
 Selected Task is Done.
-
-
+'''
