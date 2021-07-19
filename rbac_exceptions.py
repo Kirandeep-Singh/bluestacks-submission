@@ -1,10 +1,10 @@
 class invaliduser(Exception):
     def __init__(self, *args: object) -> None:
-        super().__init__("Invalid Username is provided. No such user")
+        super().__init__("Username is Invalid. No Such User Exists.Please Try Again...")
 
 class invalidpassword(Exception):
     def __init__(self, *args: object) -> None:
-        super().__init__("Incorrect Password is supplied.")
+        super().__init__("Incorrect Password is entered. Please Try Again...")
 
 class invalidinput(Exception):
     def __init__(self, *args: object) -> None:

@@ -1,10 +1,15 @@
 class PropFileOperation:
     def __init__(self, filepath) -> None:
         self._file = filepath
-        self.propupd("user_admin", "admin")
+        self.propupd("users", "admin", append=True )
         self.propupd("pass_admin", "Kiran@123")
-        self.propupd("roles_admin", "all")
-        self.propupd("role_all", "all")
+        self.propupd("roles_admin", "super")
+        self.propupd("role_read", "read_vm,read_jobs")
+        self.propupd("role_write", "create_vm,read_vm,create_jobs,read_jobs")
+        self.propupd("role_super", "all")
+        self.propupd("allroles", "read", append=True)
+        self.propupd("allroles", "write", append=True)
+        self.propupd("allroles", "super", append=True)
         self.propupd("resources", "create_vm,delete_vm,read_vm,update_vm,create_jobs,update_jobs,delete_jobs,read_jobs")
     
     def _readpropfile(self) -> dict:
@@ -27,15 +32,18 @@ class PropFileOperation:
                 line = "{}={}".format(key, val) + "\n"
                 f.write(line)
 
-    def propupd(self, keyname, value, multi=False) -> bool:
+    def propupd(self, keyname, value, append=False) -> bool:
         try:
             tmp = self._readpropfile()
             if not tmp:
-                tmp = {}   
-            if multi:
-                tmp[keyname] = ",".join(value)
+                tmp = {}
+            if append and keyname in tmp.keys():
+                x = tmp[keyname].split(",")
+                x.append(value)
+                tmp[keyname] = ",".join(set(x))
             else:
                 tmp[keyname] = value
+            # print (tmp)
         except Exception as E:
             return False
         else:
