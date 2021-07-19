@@ -18,6 +18,7 @@ Details of files are below:
 3. Following Menu Appears:
 4. When user selects the number, appropriate tasks will be executed.
 5. Following example shows execution of task6.
+6. similary, any option can be used.
 
 ```
 Wecome to admin Tasks.
