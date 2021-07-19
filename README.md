@@ -12,29 +12,28 @@ Details of files are below:
 3. **rbac_exceptions.py** contains the user defined exceptions for this tool.
 4. **rbac_logic.py** contains the backend code and classes which are excuted upon selecting an action from main.py
 
-**Clone the Repository.**
-**_run main.py, login as **admin/Kiran@123_**
-**Following Menu Appears:**
-**When user selects the number, appropriate tasks will be executed.**
-**Following example shows execution of task6**
-_Wecome to admin Tasks._
-_1). Create New User._
-_2). Create New Role._
-_3). Edit a User._
-_4). Edit a Role._
-_5). View All users_
-_6). View All Roles!!_
-_0). Exit!!_
-_Choose from above options!!!6_
+## Execution
+   a. Clone the Repository.
+   b. run main.py, login as admin/Kiran@123
+   c. Following Menu Appears:
+   d. When user selects the number, appropriate tasks will be executed.
+   e. Following example shows execution of task6
+   Wecome to admin Tasks.
+1). Create New User.
+2). Create New Role.
+3). Edit a User.
+4). Edit a Role.
+5). View All users
+6). View All Roles!!
+0). Exit!!
+Choose from above options!!!6
 Entered Execute
-**Below Roles currently exist on System.**
-**Role Name       Resources Associated**
-**==============================**
-**write           create_vm,read_vm,create_jobs,read_jobs**
-**super           all**
-**read            read_vm,read_jobs**
-**Selected Task is Done.**
-
-
+Below Roles currently exist on System.
+Role Name       Resources Associated
+==============================
+write           createvm,readvm,createjobs,readjobs
+super           all
+read            readvm,readjobs
+Selected Task is Done.
 
 
