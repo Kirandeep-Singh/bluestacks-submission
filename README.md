@@ -1,5 +1,5 @@
 # bluestacks-submission
-## RBAC Auth System for BlueStacks screening round.
+## Simple RBAC Auth System.
 ## 1. Since, No Database is being used, so to make data persistent, I have used a text file (.kd_rbac_data) which is a property file format.
 ## 2. At First execution, this system will allow user to login with a default login (admin/Kiran@123).
     a. Role means the access type and level.
@@ -8,9 +8,9 @@
 
 Details of files are below:
 1. **main.py** is the driver code. run this to execute the rbac.
-2. **propfileoperation.py** contains class for updating and getting values from property file. It can be modified to update and fetch from DB or any other place.
-3. **rbac_exceptions.py** contains the user defined exceptions for this tool.
-4. **rbac_logic.py** contains the backend code and classes which are excuted upon selecting an action from main.py
+2. **propfileoperation.py** library contains class for updating and getting values from property file. It can be modified to update and fetch from DB or any other place.
+3. **rbac_exceptions.py** library contains the user defined exceptions for this tool.
+4. **rbac_logic.py** library contains the backend code and classes which are excuted upon selecting an action from main.py
 
 ## Execution
 1. Clone the Repository.
